@@ -4,18 +4,19 @@
 name = "Sydney Ly"
 
 ## Step 2
-nickname = 'Syd'
+nickname = 'Syd' 
 
 ## Step 3
-age = 23.02
+age = 23.0 
 
 ## Step 4
-used_python = True
+used_python = True 
 
 ## Step 5
-hobbies = ["reading", "hiking", 'hanging out with friends', 'cooking']
+hobbies = ["cooking", "reading", "playing videogames", "walking my dog", "trying new food"]
 
 ## Step 6
-favorite_things = {"movie": "across the spiderverse", "animal": "dog", "color": "blue"}
+favorite_things = {"movie": "across the spiderverse", "color": "blue", "animal": "dog", "food": "sushi"}
 
 ## Optional: add your own variables here!
+
