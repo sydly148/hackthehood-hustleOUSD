@@ -1,0 +1,19 @@
+Week 2 Tiger Teams Alarm Clock Pseudocode Activity.
+
+START
+
+1. Set the time that the alarm clock should go off.
+    1a. Set the time in hours and minutes
+    1b. Set the time as AM or PM.
+    1c. Set the date (month and day).
+
+2. Check if the current time is equal to the time we set the alarm to
+    2a. If it is equal:
+        2aa. The alarm will go off
+        2ab. Ask if the user wants to turn off the alarm, or snooze
+            2aaa. If the user snoozes, then automatically snooze for 7 minutes. After 7 minutes is up, ask user to snooze or stop again.
+            2aab. If the user stops, exit the program and end the alarm sound.
+    2b. If it's not equal, then wait until time is equal.
+
+END
+
