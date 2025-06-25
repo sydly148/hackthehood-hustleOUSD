@@ -20,9 +20,20 @@ number_list.insert(3, 1000)
 number_list.pop()
 #print(number_list)
 number_list.remove(number_list[1])
-print(number_list)
-
+#print(number_list)
+#print(number_list[:3])
+#print(number_list[-3:])
 
 
 # Task 3: Working with Dictionaries
-books = {'Suzanne Collins': 'The Hunger Games', 'George Orwell': '1984', 'Rick Riordan': 'Percy Jackson', 'Jeff Kinney': 'Diary of a Wimpy Kid'}
+books = {'Suzanne Collins': 'The Hunger Games', 
+         'George Orwell': '1984', 
+         'Rick Riordan': 'Percy Jackson', 
+         'Jeff Kinney': 'Diary of a Wimpy Kid'}
+#print(books.keys())
+#print(books.values())
+#print(books.get('Rick Riordan'))
+books.pop('Rick Riordan')
+#print(books)
+del books['Suzanne Collins']
+print(books)
