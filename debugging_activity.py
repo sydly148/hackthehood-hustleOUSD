@@ -1,5 +1,28 @@
 # Debugging Activity - Sydney Ly
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Code Snippet 1
 x = 10
 y = 2
@@ -9,7 +32,7 @@ print('Result: ', result)
 #Code Snippet 2
 numbers = [1, 2, 3, 4, 5]
 for i in range(len(numbers)):
-    print(numbers[i]) # off by one error, delete +1
+    print(numbers[i]) # off by one error, delete the + 1
 
 #Code Snippet 3
 def calculate_area(radius): # missing colon
@@ -32,7 +55,7 @@ for i in range(5): # missing colons
 
 #Code Snippet 6
 def greet(name):
-    return "Hello, " + name # missing + sign, not adding them together
+    return "Hello, " + name #missing + operator to add strings
 
 print(greet("Alice"))
 
@@ -40,21 +63,23 @@ print(greet("Alice"))
 numbers = [1, 2, 3, 4, 5]
 sum = 0
 for number in numbers:
-    sum += number # missing indentation
+    sum += number # indentation error, should be indented
 print("Sum of numbers: ", sum)
+
+
 
 #Code Snippet 8
 def factorial(n):
     if n == 0:
         return 1
     else:
-        return n * factorial(n - 1) # infinite recursion, change to subtract 1
+        return n * factorial(n - 1) #never ending recursion loop, should be - 1 
 
 print(factorial(5))
 
 #Code Snippet 9
 name = input("Enter your name: ")
-if name == "Alice" or name == "Bob": # always evaluated to True, need name == 'Bob'
+if name == "Alice" or name == "Bob": # need another conditional statement
     print("Hello, " + name)
 else:
     print("Hello, stranger!")
@@ -62,11 +87,11 @@ else:
 #Code Snippet 10
 def divide_numbers(x, y):
     if y == 0:
-        return "Can't divide by zero!"
+        return "Can't divide by zero!" 
     else:
         result = x / y 
         return result
 
 num1 = 10
-num2 = 0 # Zero Division Error
+num2 = 2 # Zero division error 
 print(divide_numbers(num1, num2))
