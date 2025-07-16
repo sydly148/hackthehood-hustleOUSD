@@ -6,10 +6,10 @@ class Armor:
         self.max_block = max_block
     
     def block(self):
-        '''Returns a random value between 0 and max block.'''
+        '''Returns a random value between 0 and max_block.'''
         return random.randint(0, self.max_block)
-    
+
 
 if __name__ == "__main__":
-    shield = Armor("Shield", 20)
+    shield = Armor("Shield", 30)
     print(shield.block())

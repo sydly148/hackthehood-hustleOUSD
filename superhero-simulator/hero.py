@@ -9,54 +9,56 @@ class Hero:
         self.name = name
         self.starting_health = starting_health
         self.current_health = starting_health
-        self.armors = []
         self.abilities = []
+        self.armors = []
 
     def battle(self, opponent):
-        '''Fight another hero and randomly choose a winner.'''
+        '''Print a random winner.'''
         winner = random.choice([self.name, opponent.name])
-        print(f"The winner of this battle is {winner}!")
+        print(f"{winner} has won the battle!")
     
     def add_ability(self, ability):
-        '''Appends an ability to a hero's list of abilities.'''
+        '''Adds an ability to the existing abilities list.'''
         self.abilities.append(ability)
-        print(f"{ability.name} has been added to the list of abilities.")
+        print(f"{ability.name} has been added to {self.name}'s ability list!")
     
     def sum_of_attacks(self):
-        '''Iterates through entire list of abilities and sums up their attack values.'''
+        '''Loops through abilities list and sums up all attack damage.'''
         total_damage = 0
         for ability in self.abilities:
             total_damage += ability.attack()
         return total_damage
-    
+
     def add_armor(self, armor):
-        '''Appends an armor to a hero's list of armors.'''
+        '''Adds an armor to the armors list.'''
         self.armors.append(armor)
-        print(f"{armor.name} has been added to the list of armors.")
-    
+        print(f"{armor.name} has been added to {self.name}'s ability list!")
+
     def defend(self):
-        '''Iterates through entire list of armors and sums up their total block.'''
+        '''Loops through armors list and sums up all block values.'''
         total_block = 0
         for armor in self.armors:
             total_block += armor.block()
-        return total_block 
-
-
+        return total_block
 
 
 if __name__ == "__main__":
     my_hero = Hero("Grace Hopper", 200)
-    my_hero2 = Hero("Spider-Man", 300)
+    my_hero2 = Hero("Superman", 500)
     print(my_hero.name)            # Grace Hopper
     print(my_hero.current_health)  # 200
-    ability1 = Ability("Explosion", 300)
-    ability2 = Ability("Electrocution", 150)
-    ability3 = Ability("Web shooter", 50)
-    ability4 = Ability("Punch", 15)
-    my_hero.add_ability(ability1)
-    my_hero.add_ability(ability4)
-    my_hero2.add_ability(ability2)
-    my_hero2.add_ability(ability3)
-    print(my_hero.abilities)
-    print(my_hero2.abilities)
-
+    my_hero.battle(my_hero2)
+    fireball = Ability("Fireball", 50)
+    lightning = Ability("Lightning", 55)
+    telekinesis = Ability("Telekinesis", 60)
+    my_hero.add_ability(fireball)
+    my_hero.add_ability(lightning)
+    my_hero.add_ability(telekinesis)
+    print(my_hero.sum_of_attacks())
+    shield = Armor("Shield", 30)
+    helmet = Armor("Helmet", 25)
+    boots = Armor("Boots", 10)
+    my_hero.add_armor(shield)
+    my_hero.add_armor(helmet)
+    my_hero.add_armor(boots)
+    print(my_hero.defend())
